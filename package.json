@@ -1,0 +1,37 @@
+{
+  "name": "daily-bot-discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "env-cmd tsx --watch src/bot.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateus-Kent/daily-bot-discord.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mateus-Kent/daily-bot-discord/issues"
+  },
+  "homepage": "https://github.com/Mateus-Kent/daily-bot-discord#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "env-cmd": "^10.1.0",
+    "moment": "^2.30.1",
+    "node-cron": "^3.0.3",
+    "node-schedule": "^2.1.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "@types/node-cron": "^3.0.11",
+    "@types/node-schedule": "^2.1.6",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
