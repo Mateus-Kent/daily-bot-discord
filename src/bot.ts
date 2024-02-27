@@ -1,7 +1,6 @@
-import { Client, GuildMember, GatewayIntentBits } from 'discord.js'
+import { Client, GuildMember, Message } from 'discord.js'
 import { env } from './env'
 import cron from 'node-cron'
-import { Message } from './Interfaces/MessageInterface'
 
 const client = new Client({
   intents: [
@@ -26,7 +25,7 @@ client.once('ready', () => {
   scheduleMessages() // Agende as mensagens diárias
 })
 
-client.on('messageCreate', (message) => {
+client.on('messageCreate', (message: Message) => {
   if (message.author.bot) return // Ignorar mensagens de outros bots
 
   if (message.content.startsWith(prefix)) {
@@ -34,7 +33,7 @@ client.on('messageCreate', (message) => {
   }
 })
 
-function handleCommand(message: any) {
+function handleCommand(message: Message) {
   const args = message.content.slice(prefix.length).trim().split(/ +/)
   const command = args.shift()?.toLowerCase()
 
@@ -43,7 +42,7 @@ function handleCommand(message: any) {
   }
 }
 
-function setDailySchedule(message: any, time: string | undefined) {
+function setDailySchedule(message: Message, time: string | undefined) {
   if (!message.member || !message.member.permissions.has('Administrator')) {
     message.reply('Você não tem permissão para executar este comando.')
     return
