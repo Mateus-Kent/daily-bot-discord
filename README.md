@@ -1,3 +1,5 @@
+<img  src="./.github/imgs/botDiscordHeader.svg" >
+
 # Daily Bot
 
 A Discord bot designed to automate and manage team daily reports, facilitating the asynchronous daily standup process.
