@@ -22,7 +22,6 @@ export function setDailySchedule(message: Message, time: string | undefined) {
   )
 
   scheduleMessages()
-  console.log('aaaaaaa', dailyConfig.schedule)
 }
 
 function isValidTime(time: string): boolean {
