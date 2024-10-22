@@ -58,7 +58,7 @@ client.on('messageCreate', async (message: Message) => {
       
       message.reply('Relatório reportado com sucesso! Obrigado pelo seu daily.')
       
-      // Opcional: Log para verificar os relatórios
+      // Log para verificar os relatórios
       console.log('Daily Reports:', dailyReports)
     }
   }
